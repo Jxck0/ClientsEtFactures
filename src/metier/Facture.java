@@ -65,6 +65,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return null;
+		return client.createFacture(this.montant);
 	}
 }
