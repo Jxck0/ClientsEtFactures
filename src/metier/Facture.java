@@ -8,10 +8,15 @@ public class Facture
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
 	 */
+	private Client client;
+	private int montant;
+	private boolean reglee;
+	private LocalDate date;
+	
 	
 	public Client getClient()
 	{
-		return getClient();
+		return client;
 	}
 
 	/**
@@ -21,7 +26,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return this.getMontant();
+		return this.montant;
 	}
 
 	/**
@@ -31,7 +36,7 @@ public class Facture
 	
 	public boolean estReglee()
 	{
-		return this.estReglee();
+		return this.reglee;
 	}
 
 	/**
@@ -41,7 +46,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return null;
+		return date;
 	}
 
 	/**
@@ -50,6 +55,7 @@ public class Facture
 	
 	public void delete()
 	{
+		client.remove(this);
 	}
 	
 	/**
