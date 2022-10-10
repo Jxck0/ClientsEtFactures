@@ -10,7 +10,7 @@ public class Facture
 	 */
 	private Client client;
 	private int montant;
-	private boolean reglee=true;
+	private boolean reglee;
 	private LocalDate date;
 	
 	
