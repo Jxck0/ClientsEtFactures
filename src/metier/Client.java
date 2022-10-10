@@ -102,13 +102,13 @@ public class Client
 		Facture f;
 		for(int i = 0; i<list.size(); i++)
 		{
-			f = f + (list.get(i));
+			f = list.get(i);
 			if(f.estReglee())
 			{
 				list.add(f);
 			}
 		}
-		return f;
+		return list;
 	}
 	
 
