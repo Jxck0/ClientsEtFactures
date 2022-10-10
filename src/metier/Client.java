@@ -9,9 +9,13 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
+	private String nom;
+	private ArrayList<Facture> f = new ArrayList<>();
+	private List<Facture> list = new ArrayList<>();
 	
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
@@ -21,7 +25,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return nom;
 	}
 	
 	/**
@@ -31,6 +35,7 @@ public class Client
 	
 	public void setNom(String nom)
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -41,7 +46,9 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		Facture f = new Facture(montant, this);
+		add(f);
+		return f;
 	}
 	
 	/**
@@ -51,7 +58,8 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		List<Facture> list = new ArrayList<>();
+		return list;
 	}
 	
 	/**
@@ -61,7 +69,12 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int montant = 0;
+		for(int i = 0 ; i<list.size(); i++)	
+		{
+			montant = montant + (list.get(i)).getMontant();
+		}
+		return montant;
 	}
 
 	/**
@@ -73,7 +86,9 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return null;
+		Facture f = new Facture(montant,reglee, this);
+		add(f);
+		return f;
 	}	
 	
 	/**
@@ -83,7 +98,17 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return null;
+		List<Facture> list = new ArrayList<>();
+		Facture f;
+		for(int i = 0; i<list.size(); i++)
+		{
+			f = f + (list.get(i));
+			if(f.estReglee())
+			{
+				list.add(f);
+			}
+		}
+		return list;
 	}
 	
 
@@ -91,9 +116,10 @@ public class Client
 	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
+	private static List<Client> listClient = new ArrayList<>();
 	public static List<Client> tous()
 	{
-		return null;
+		return listClient;
 	}
 	
 	/**
@@ -102,5 +128,6 @@ public class Client
 	
 	public void delete()
 	{
+		listClient.remove(this);
 	}
 }
