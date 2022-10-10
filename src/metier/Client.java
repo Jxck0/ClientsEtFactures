@@ -128,4 +128,9 @@ public class Client
 	{
 		listClient.remove(this);
 	}
+
+	public void remove(Facture facture) {
+		// TODO Auto-generated method stub
+		
+	}
 }
