@@ -14,6 +14,8 @@ public class Facture
 	private LocalDate date;
 	
 	
+
+
 	public Client getClient()
 	{
 		return client;
@@ -46,7 +48,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return date;
+		return this.date;
 	}
 
 	/**
