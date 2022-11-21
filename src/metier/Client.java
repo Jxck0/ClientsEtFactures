@@ -131,6 +131,6 @@ public class Client
 
 	public void remove(Facture facture) {
 		// TODO Auto-generated method stub
-		
+		facture.remove(this);
 	}
 }
