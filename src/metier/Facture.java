@@ -13,8 +13,18 @@ public class Facture
 	private boolean reglee;
 	private LocalDate date;
 	
-	
+	public Facture(Client client, int montant, boolean reglee, LocalDate date)
+	{
+		if(montant >= 0)
+		{
+			montantFac = montant;
+			regleeFac = reglee;
+			this.date = date;
+			this.client = client;
+		}
+	}
 
+	public 
 
 	public Client getClient()
 	{
