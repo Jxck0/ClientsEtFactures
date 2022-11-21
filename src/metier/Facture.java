@@ -13,14 +13,45 @@ public class Facture
 	private boolean reglee;
 	private LocalDate date;
 	
-	public Facture(Client client, int montant, boolean reglee, LocalDate date)
+	public Facture(Client client, int montant)
 	{
-		if(montant >= 0)
+		if(montant>=0)
 		{
-			montantFac = montant;
-			regleeFac = reglee;
-			this.date = date;
+			montantFact  = montant;
 			this.client = client;
+			date = LocalDate.now();
+		}
+	}
+	
+	public Facture(int montant, boolean reglement, Client client)
+	{
+		if(montant>=0)
+		{
+			montantFacture  = montant;
+			reglementFacture = reglement;
+			this.client = client;
+			date = LocalDate.now();
+		}
+	}
+	public Facture(int montant, boolean reglement, Client client, LocalDate date )
+	{
+		if(montant>=0)
+		{
+			montantFacture  = montant;
+			reglementFacture = reglement;
+			this.client = client;
+			this.date = date;
+		}
+		
+	}
+	public Facture(Facture f )
+	{
+		if(f.montantFacture>=0)
+		{
+			montantFacture  = f.montantFacture;
+			reglementFacture = f.reglementFacture;
+			this.client = f.client;
+			this.date = f.date;
 		}
 	}
 
