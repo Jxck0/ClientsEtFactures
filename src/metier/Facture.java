@@ -27,7 +27,7 @@ public class Facture
 		}
 	}
 	
-	public Facture(int montant, boolean reglement, Client client) throws IllegalArgumentException
+	public Facture(int montant, boolean reglee, Client client) throws IllegalArgumentException
 	{
 		if(montant>=0)
 		{
@@ -58,7 +58,7 @@ public class Facture
 	}
 	public Facture(Facture f )throws IllegalArgumentException
 	{
-		if(f.montantFacture>=0)
+		if(f.montant>=0)
 		{
 			montantFacture  = f.montantFacture;
 			reglementFacture = f.reglementFacture;
