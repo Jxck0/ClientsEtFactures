@@ -13,63 +13,7 @@ public class Facture
 	private boolean reglee;
 	private LocalDate date;
 	
-	public Facture(int montant, Client client)throws IllegalArgumentException
-	{
-		if(montant>=0)
-		{
-			montantFacture  = montant;
-			this.client = client;
-			date = LocalDate.now();
-		}
-		else
-		{
-			throw new IllegalArgumentException();
-		}
-	}
 	
-	public Facture(int montant, boolean reglee, Client client) throws IllegalArgumentException
-	{
-		if(montant>=0)
-		{
-			montantFacture  = montant;
-			reglementFacture = reglement;
-			this.client = client;
-			date = LocalDate.now();
-		}
-		else
-		{
-			throw new IllegalArgumentException();
-		}
-	}
-	public Facture(int montant, boolean reglement, Client client, LocalDate date )throws IllegalArgumentException
-	{
-		if(montant>=0)
-		{
-			montantFacture  = montant;
-			reglementFacture = reglement;
-			this.client = client;
-			this.date = date;
-		}
-		else
-		{
-			throw new IllegalArgumentException();
-		}
-		
-	}
-	public Facture(Facture f )throws IllegalArgumentException
-	{
-		if(f.montant>=0)
-		{
-			montantFacture  = f.montantFacture;
-			reglementFacture = f.reglementFacture;
-			this.client = f.client;
-			this.date = f.date;
-		}
-		else
-		{
-			throw new IllegalArgumentException();
-		}
-	}
 
 
 	public Client getClient()
