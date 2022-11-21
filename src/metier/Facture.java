@@ -12,8 +12,6 @@ public class Facture
 	private int montant;
 	private boolean reglee;
 	private LocalDate date;
-	
-	
 
 
 	public Client getClient()
